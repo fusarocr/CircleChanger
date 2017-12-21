@@ -275,13 +275,14 @@ class CircleChanger(object):
         #            if this does not make sense to you.
         ################################################################
 
-        self.radius = self.radius + amount_to_swell_or_shrink
-        if self.radius < 1:
-            self.radius = 1
+        self.circle.radius = self.circle.radius + amount_to_swell_or_shrink
+        if self.circle.radius < 1:
+            self.circle.radius = 1
 
         self.circle.outline_thickness = random.randrange(3, 16)
         self.circle.fill_color = self.colors[random.randrange(0,
-                                                              len(self.colors))]
+                                                              len(
+                                                                  self.colors))]
 
 
     def swell_or_shrink_repeatedly(self,
